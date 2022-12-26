@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>cucumber-jvm-example</td>
+        <td>1</td>
+      <td>26 Dec 2022, 22:00</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">stepDefinitions.DashBoardModuleStepDef.kullaniciEventNameEventDateParticipantNameLastnameContactTextBoxlariDoldurur()</td>
+              <td>1</td>
+              <td class="duration" data-value="9745490700">9.745</td>
+              <td class="duration" data-value="9745490700">9.745</td>
+              <td class="duration" data-value="9745490700">9.745</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.DashBoardModuleStepDef.kullaniciEventiSildiginiGorebilmeli()</td>
+              <td>1</td>
+              <td class="duration" data-value="15056192700">15.056</td>
+              <td class="duration" data-value="15056192700">15.056</td>
+              <td class="duration" data-value="15056192700">15.056</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.DashBoardModuleStepDef.kullaniciEventiSiler()</td>
+              <td>1</td>
+              <td class="duration" data-value="63962400">0.063</td>
+              <td class="duration" data-value="63962400">0.063</td>
+              <td class="duration" data-value="63962400">0.063</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.DashBoardModuleStepDef.kullaniciGecersizUsernameVePasswordGirer()</td>
+              <td>1</td>
+              <td class="duration" data-value="344786400">0.344</td>
+              <td class="duration" data-value="344786400">0.344</td>
+              <td class="duration" data-value="344786400">0.344</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.DashBoardModuleStepDef.kullaniciLoginSayfasiniGoruntulemelidir()</td>
+              <td>1</td>
+              <td class="duration" data-value="25989800">0.025</td>
+              <td class="duration" data-value="25989800">0.025</td>
+              <td class="duration" data-value="25989800">0.025</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.DashBoardModuleStepDef.kullaniciNoRegisteredEventHasBeenFoundMesajiniGormeli()</td>
+              <td>1</td>
+              <td class="duration" data-value="4060225500">4.060</td>
+              <td class="duration" data-value="4060225500">4.060</td>
+              <td class="duration" data-value="4060225500">4.060</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.DashBoardModuleStepDef.kullaniciParticipantsBilgileriniGorur()</td>
+              <td>1</td>
+              <td class="duration" data-value="79918900">0.079</td>
+              <td class="duration" data-value="79918900">0.079</td>
+              <td class="duration" data-value="79918900">0.079</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.DashBoardModuleStepDef.kullaniciParticipantsButonunaBasar()</td>
+              <td>1</td>
+              <td class="duration" data-value="115894500">0.115</td>
+              <td class="duration" data-value="115894500">0.115</td>
+              <td class="duration" data-value="115894500">0.115</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.EventModuleStepDef.kullaniciAddParticipantButonunaBasar()</td>
+              <td>2</td>
+              <td class="duration" data-value="79832500">0.079</td>
+              <td class="duration" data-value="79832500">0.087</td>
+              <td class="duration" data-value="159665000">0.159</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.EventModuleStepDef.kullaniciCreateEventButonunaBasar()</td>
+              <td>3</td>
+              <td class="duration" data-value="3197122900">3.197</td>
+              <td class="duration" data-value="3197122900">3.303</td>
+              <td class="duration" data-value="9591368700">9.591</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.EventModuleStepDef.kullaniciCreateEventFormunuGormelidir()</td>
+              <td>1</td>
+              <td class="duration" data-value="48971100">0.048</td>
+              <td class="duration" data-value="48971100">0.048</td>
+              <td class="duration" data-value="48971100">0.048</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.EventModuleStepDef.kullaniciCreateEventPageIndeCreateEventBut&#305;onunaBasar()</td>
+              <td>1</td>
+              <td class="duration" data-value="144679500">0.144</td>
+              <td class="duration" data-value="144679500">0.144</td>
+              <td class="duration" data-value="144679500">0.144</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.EventModuleStepDef.kullaniciCreateEventSayfasindaCreateEventButonunaBasar()</td>
+              <td>3</td>
+              <td class="duration" data-value="2130954233">2.130</td>
+              <td class="duration" data-value="2130954233">2.154</td>
+              <td class="duration" data-value="6392862700">6.392</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.EventModuleStepDef.kullaniciDashboardSayfasinaYonlenmeli()</td>
+              <td>3</td>
+              <td class="duration" data-value="2016295833">2.016</td>
+              <td class="duration" data-value="2016295833">2.023</td>
+              <td class="duration" data-value="6048887500">6.048</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.EventModuleStepDef.kullaniciEditEventButonunaTiklar()</td>
+              <td>2</td>
+              <td class="duration" data-value="121639450">0.121</td>
+              <td class="duration" data-value="121639450">0.135</td>
+              <td class="duration" data-value="243278900">0.243</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.EventModuleStepDef.kullaniciEditEventSayfasinaYonlenmelidir()</td>
+              <td>1</td>
+              <td class="duration" data-value="58976200">0.058</td>
+              <td class="duration" data-value="58976200">0.058</td>
+              <td class="duration" data-value="58976200">0.058</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.EventModuleStepDef.kullaniciEventCreatedSuccessfullyMesajiniAlir()</td>
+              <td>1</td>
+              <td class="duration" data-value="59786300">0.059</td>
+              <td class="duration" data-value="59786300">0.059</td>
+              <td class="duration" data-value="59786300">0.059</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.EventModuleStepDef.kullaniciEventNameEventDateParticipantNameLastnameVeContactTextBoxlariDoldurur()</td>
+              <td>2</td>
+              <td class="duration" data-value="9880519700">9.880</td>
+              <td class="duration" data-value="9880519700">9.975</td>
+              <td class="duration" data-value="19761039400">19.761</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.EventModuleStepDef.kullaniciEventNameFieldIsRequiredMesajiniGormeli()</td>
+              <td>1</td>
+              <td class="duration" data-value="27984500">0.027</td>
+              <td class="duration" data-value="27984500">0.027</td>
+              <td class="duration" data-value="27984500">0.027</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.EventModuleStepDef.kullaniciGuncellemeninBasariliBirSekildeGerceklestirildigiiniGosterenMesajAlmali()</td>
+              <td>1</td>
+              <td class="duration" data-value="56891000">0.056</td>
+              <td class="duration" data-value="56891000">0.056</td>
+              <td class="duration" data-value="56891000">0.056</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.EventModuleStepDef.kullaniciParticipantEklemeFormunuGormelidir()</td>
+              <td>1</td>
+              <td class="duration" data-value="34980900">0.034</td>
+              <td class="duration" data-value="34980900">0.034</td>
+              <td class="duration" data-value="34980900">0.034</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.EventModuleStepDef.kullaniciParticipantLastNameIsRequiredMesajiniGormeli()</td>
+              <td>1</td>
+              <td class="duration" data-value="34421700">0.034</td>
+              <td class="duration" data-value="34421700">0.034</td>
+              <td class="duration" data-value="34421700">0.034</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.EventModuleStepDef.kullaniciParticipantNameIsRequiredMesajiniGormeli()</td>
+              <td>1</td>
+              <td class="duration" data-value="27984200">0.027</td>
+              <td class="duration" data-value="27984200">0.027</td>
+              <td class="duration" data-value="27984200">0.027</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.EventModuleStepDef.kullaniciPleaseAddParticipantMeajiniAlmali()</td>
+              <td>1</td>
+              <td class="duration" data-value="65141200">0.065</td>
+              <td class="duration" data-value="65141200">0.065</td>
+              <td class="duration" data-value="65141200">0.065</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.EventModuleStepDef.kullaniciPleaseChooseAValidDateMesajiniGormeli()</td>
+              <td>1</td>
+              <td class="duration" data-value="27968100">0.027</td>
+              <td class="duration" data-value="27968100">0.027</td>
+              <td class="duration" data-value="27968100">0.027</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.EventModuleStepDef.kullaniciPleaseEnterEmailOrPhoneNumberMesajiniGormeli()</td>
+              <td>1</td>
+              <td class="duration" data-value="33896100">0.033</td>
+              <td class="duration" data-value="33896100">0.033</td>
+              <td class="duration" data-value="33896100">0.033</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.EventModuleStepDef.kullaniciTumAlanlaaraErisimSaglayabilmelidir()</td>
+              <td>1</td>
+              <td class="duration" data-value="217853500">0.217</td>
+              <td class="duration" data-value="217853500">0.217</td>
+              <td class="duration" data-value="217853500">0.217</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.EventModuleStepDef.kullaniciTumParticipantlariSiler()</td>
+              <td>1</td>
+              <td class="duration" data-value="2190716900">2.190</td>
+              <td class="duration" data-value="2190716900">2.190</td>
+              <td class="duration" data-value="2190716900">2.190</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.EventModuleStepDef.kullaniciUpdateEventButonunaTiklar()</td>
+              <td>2</td>
+              <td class="duration" data-value="2122452950">2.122</td>
+              <td class="duration" data-value="2122452950">2.157</td>
+              <td class="duration" data-value="4244905900">4.244</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginModuleStepDef.kullaniciEventManagerLoginBasligiAltindaLoginFormunuGormeli()</td>
+              <td>1</td>
+              <td class="duration" data-value="36979100">0.036</td>
+              <td class="duration" data-value="36979100">0.036</td>
+              <td class="duration" data-value="36979100">0.036</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginModuleStepDef.kullaniciGecerliPasswordGirer()</td>
+              <td>4</td>
+              <td class="duration" data-value="6153803225">6.153</td>
+              <td class="duration" data-value="6153803225">6.169</td>
+              <td class="duration" data-value="24615212900">24.615</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginModuleStepDef.kullaniciGecerliUsernameGirer()</td>
+              <td>4</td>
+              <td class="duration" data-value="3169763275">3.169</td>
+              <td class="duration" data-value="3169763275">3.183</td>
+              <td class="duration" data-value="12679053100">12.679</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginModuleStepDef.kullaniciKontrolPanelindeHosgeldinMesajiniGorur()</td>
+              <td>2</td>
+              <td class="duration" data-value="40964200">0.040</td>
+              <td class="duration" data-value="40964200">0.051</td>
+              <td class="duration" data-value="81928400">0.081</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginModuleStepDef.kullaniciLoginButonunaBasar()</td>
+              <td>5</td>
+              <td class="duration" data-value="2114253920">2.114</td>
+              <td class="duration" data-value="2114253920">2.189</td>
+              <td class="duration" data-value="10571269600">10.571</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginModuleStepDef.kullaniciLoginButonunuGormeli()</td>
+              <td>1</td>
+              <td class="duration" data-value="53969100">0.053</td>
+              <td class="duration" data-value="53969100">0.053</td>
+              <td class="duration" data-value="53969100">0.053</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginModuleStepDef.kullaniciPasswordTextBoxAltindaPasswordFieldIsRequiredMesjiniGormeli()</td>
+              <td>1</td>
+              <td class="duration" data-value="3035473500">3.035</td>
+              <td class="duration" data-value="3035473500">3.035</td>
+              <td class="duration" data-value="3035473500">3.035</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginModuleStepDef.kullaniciPasswordTextBoxiniGormeli()</td>
+              <td>1</td>
+              <td class="duration" data-value="38983100">0.038</td>
+              <td class="duration" data-value="38983100">0.038</td>
+              <td class="duration" data-value="38983100">0.038</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginModuleStepDef.kullaniciSaniyeBekler(int)</td>
+              <td>32</td>
+              <td class="duration" data-value="2038050984">2.038</td>
+              <td class="duration" data-value="2038050984">3.002</td>
+              <td class="duration" data-value="65217631500">1:5.217</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginModuleStepDef.kullaniciSayfayiKapatir()</td>
+              <td>5</td>
+              <td class="duration" data-value="1320333300">1.320</td>
+              <td class="duration" data-value="1320333300">2.851</td>
+              <td class="duration" data-value="6601666500">6.601</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginModuleStepDef.kullaniciUrlyeGider()</td>
+              <td>5</td>
+              <td class="duration" data-value="4182418100">4.182</td>
+              <td class="duration" data-value="4182418100">5.843</td>
+              <td class="duration" data-value="20912090500">20.912</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginModuleStepDef.kullaniciUserNameTextBoxiniGormeli()</td>
+              <td>1</td>
+              <td class="duration" data-value="28982400">0.028</td>
+              <td class="duration" data-value="28982400">0.028</td>
+              <td class="duration" data-value="28982400">0.028</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginModuleStepDef.kullaniciUsernameTextBoxAltindaUsernameFieldIsRequiredMesjiniGormeli()</td>
+              <td>1</td>
+              <td class="duration" data-value="38977800">0.038</td>
+              <td class="duration" data-value="38977800">0.038</td>
+              <td class="duration" data-value="38977800">0.038</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">stepDefinitions.LoginModuleStepDef.kullaniciUsernameVePassworduDoldurmadanLoginButonunaTiklar()</td>
+              <td>1</td>
+              <td class="duration" data-value="73957700">0.073</td>
+              <td class="duration" data-value="73957700">0.073</td>
+              <td class="duration" data-value="73957700">0.073</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>43</td>
+            <td>103</td>
+            <td class="duration">2.164</td>
+            <td class="duration">1:5.217</td>
+            <td class="duration">3:42.950</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

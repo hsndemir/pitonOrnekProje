@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="16" time="225.148">
+    <testcase classname="3. Dashboard Module" name="TC01 Kimligi dogrulanmissa kullanici kontrol panelini görüntülemelidir" time="18.219">
+        <system-out>
+            <![CDATA[Given Kullanici urlye gider.................................................passed
+When Kullanici gecerli username girer.......................................passed
+And Kullanici gecerli password girer........................................passed
+And Kullanici login butonuna basar..........................................passed
+And Kullanici sayfayi kapatir...............................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="3. Dashboard Module" name="TC02 Kimligi dogrulanmamissa kullanici login sayfasına yönlenmeli" time="6.47">
+        <system-out>
+            <![CDATA[Given Kullanici urlye gider.................................................passed
+When Kullanici gecersiz username ve password girer..........................passed
+And Kullanici login butonuna basar..........................................passed
+Then Kullanici login sayfasini goruntulemelidir.............................passed
+And Kullanici sayfayi kapatir...............................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="3. Dashboard Module" name="TC03 Event baska sekilde olusturulmussa, kullanici olaylarin listesini gormelidir." time="23.29">
+        <system-out>
+            <![CDATA[Given Kullanici urlye gider.................................................passed
+When Kullanici gecerli username girer.......................................passed
+And Kullanici gecerli password girer........................................passed
+And Kullanici login butonuna basar..........................................passed
+Then Kullanici dashboard sayfasina yonlenmeli...............................passed
+And Kullanici No registered event has been found!! mesajini gormeli.........passed
+And Kullanici 3 saniye bekler...............................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="3. Dashboard Module" name="TC04 Kullanici edit event butonuna tikladiginda edit evente gidebilmeli" time="27.398">
+        <system-out>
+            <![CDATA[Given Kullanici Create Event butonuna basar.................................passed
+And Kullanici 2 saniye bekler...............................................passed
+And Kullanici Event name, Event date, Participant name, lastname ve contact text boxlari doldurur.passed
+And Kullanici 2 saniye bekler...............................................passed
+And Kullanici create event sayfasinda create event butonuna basar...........passed
+And Kullanici 2 saniye bekler...............................................passed
+And Kullanici edit event butonuna tiklar....................................passed
+And Kullanici 2 saniye bekler...............................................passed
+And Kullanici Update Event butonuna tiklar..................................passed
+And Kullanici 2 saniye bekler...............................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="3. Dashboard Module" name="TC05 Kullanici delete butonuna bastiginda eventi silebilmeli" time="17.131">
+        <system-out>
+            <![CDATA[Given Kullanici eventi siler................................................passed
+Then Kullanici eventi sildigini gorebilmeli.................................passed
+And Kullanici 2 saniye bekler...............................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="3. Dashboard Module" name="TC06 Kullanici event participant ( etkinlik katilimcilari ) goruntuleyebilmeelidir" time="26.08">
+        <system-out>
+            <![CDATA[Given Kullanici Create Event butonuna basar.................................passed
+And Kullanici 2 saniye bekler...............................................passed
+And Kullanici Event name, Event date, Participant name, lastname, contact text boxlari doldurur.passed
+And Kullanici 2 saniye bekler...............................................passed
+And Kullanici create event sayfasinda create event butonuna basar...........passed
+And Kullanici 2 saniye bekler...............................................passed
+And Kullanici Participants butonuna basar...................................passed
+And Kullanici 2 saniye bekler...............................................passed
+And Kullanici Participants bilgilerini gorur................................passed
+And Kullanici sayfayi kapatir...............................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="2. Event Module" name="TC01 Kullanici Kontrol panelinde Create Event buttona tiklarsa Create event formu goruntulemelidir" time="20.92">
+        <system-out>
+            <![CDATA[Given Kullanici urlye gider.................................................passed
+Given Kullanici gecerli username girer......................................passed
+And Kullanici gecerli password girer........................................passed
+When Kullanici login butonuna basar.........................................passed
+Then Kullanici kontrol panelinde hosgeldin mesajini gorur...................passed
+Given Kullanici Create Event butonuna basar.................................passed
+Then Kullanici Create event formunu gormelidir..............................passed
+And Kullanici 2 saniye bekler...............................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="2. Event Module" name="TC02 Kullanici etkinlik formunu doldurmadan, Etkinlik Olustur dugmesini tiklarsa dogrulama hatalarini gormelidir." time="12.326">
+        <system-out>
+            <![CDATA[Given Kullanici Create event page inde create event butıonuna basar.........passed
+And Kullanici 2 saniye bekler...............................................passed
+Then Kullanici Event name field is required mesajini gormeli................passed
+And Kullanici 2 saniye bekler...............................................passed
+And Kullanici Please choose a valid date mesajini gormeli...................passed
+And Kullanici 2 saniye bekler...............................................passed
+And Kullanici Participant name is required mesajini gormeli.................passed
+And Kullanici 2 saniye bekler...............................................passed
+And Kullanici Participant last name is required mesajini gormeli............passed
+And Kullanici 2 saniye bekler...............................................passed
+And Kullanici Please enter email or phone number mesajini gormeli...........passed
+And Kullanici 2 saniye bekler...............................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="2. Event Module" name="TC03 Kullanici add participant buttona bastiginda yeni participant eklemelidir" time="4.117">
+        <system-out>
+            <![CDATA[Given Kullanici add participant butonuna basar..............................passed
+And Kullanici 2 saniye bekler...............................................passed
+Then Kullanici participant ekleme formunu gormelidir........................passed
+And Kullanici 2 saniye bekler...............................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="2. Event Module" name="TC04 Kullanici  tum participants’i silerse hata mesaji gormeli" time="8.38">
+        <system-out>
+            <![CDATA[Given Kullanici tum participantlari siler...................................passed
+And Kullanici 2 saniye bekler...............................................passed
+Then Kullanici Please add participant! meajini almali.......................passed
+And Kullanici 2 saniye bekler...............................................passed
+And Kullanici add participant butonuna basar................................passed
+And Kullanici 2 saniye bekler...............................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="2. Event Module" name="TC05 Kullanici, gerekli tum alanlari doldurursa yeni event olusturabilmeli ve" time="22.217">
+        <system-out>
+            <![CDATA[Given Kullanici Event name, Event date, Participant name, lastname ve contact text boxlari doldurur.passed
+And Kullanici 2 saniye bekler...............................................passed
+And Kullanici create event sayfasinda create event butonuna basar...........passed
+And Kullanici 2 saniye bekler...............................................passed
+Then Kullanici Event created successfully mesajini alir.....................passed
+And Kullanici 2 saniye bekler...............................................passed
+And Kullanici dashboard sayfasina yonlenmeli................................passed
+And Kullanici 2 saniye bekler...............................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="2. Event Module" name="TC06 Kullanici eventi duzenleyebilmelidir. Kullanici edite tikladiginda" time="6.414">
+        <system-out>
+            <![CDATA[Given Kullanici edit event butonuna tiklar..................................passed
+And Kullanici 2 saniye bekler...............................................passed
+Then Kullanici Edit Event sayfasina yonlenmelidir...........................passed
+And Kullanici 2 saniye bekler...............................................passed
+And Kullanici tum alanlaara erisim saglayabilmelidir........................passed
+And Kullanici 2 saniye bekler...............................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="2. Event Module" name="TC07 Kullanici, gerekli alanlar dolduruldugunda eventi guncelleyebilmeli ve" time="9.084">
+        <system-out>
+            <![CDATA[Given Kullanici Update Event butonuna tiklar................................passed
+And Kullanici 2 saniye bekler...............................................passed
+Then Kullanici guncellemenin basarili bir sekilde gerceklestirildigiini gosteren mesaj almali.passed
+And Kullanici 2 saniye bekler...............................................passed
+And Kullanici dashboard sayfasina yonlenmeli................................passed
+And Kullanici sayfayi kapatir...............................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="1.&#9;Login Module" name="TC01 Kimligi dgrulanmamissa, kullanici oturum acma formunu gormelidir." time="5.14">
+        <system-out>
+            <![CDATA[Given Kullanici urlye gider.................................................passed
+Then Kullanici Event Manager Login basligi altinda login formunu gormeli....passed
+And Kullanici userName text boxini gormeli..................................passed
+And Kullanici password text boxini gormeli..................................passed
+And Kullanici login butonunu gormeli........................................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="1.&#9;Login Module" name="TC02 Kullanici giriş formunu doldurmadan login button’a basarsa onay hatasi almali" time="3.148">
+        <system-out>
+            <![CDATA[Given Kullanici username ve passwordu doldurmadan login butonuna tiklar.....passed
+Then Kullanici username text box altinda Username field is required mesjini gormeli.passed
+And Kullanici password text box altinda Password  field is required mesjini gormeli.passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="1.&#9;Login Module" name="TC03 Authenticate basarili ise kullanici kontrol paneline gittiginde hosgeldin mesajini gorur" time="12.677">
+        <system-out>
+            <![CDATA[Given Kullanici gecerli username girer......................................passed
+And Kullanici gecerli password girer........................................passed
+When Kullanici login butonuna basar.........................................passed
+Then Kullanici kontrol panelinde hosgeldin mesajini gorur...................passed
+And Kullanici sayfayi kapatir...............................................passed
+]]>
+        </system-out>
+    </testcase>
+</testsuite>

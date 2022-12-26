@@ -1,0 +1,20 @@
+# Created at 2022-12-26T22:00:42.514
+C:\Users\LENOVO\IdeaProjects\AssessmentPiton\target\surefire-reports\TEST-1.	Login Module.xml (Dosya adı, dizin adı veya birim etiketi sözdizimi hatalı)
+java.io.FileNotFoundException: C:\Users\LENOVO\IdeaProjects\AssessmentPiton\target\surefire-reports\TEST-1.	Login Module.xml (Dosya adı, dizin adı veya birim etiketi sözdizimi hatalı)
+	at java.base/java.io.FileOutputStream.open0(Native Method)
+	at java.base/java.io.FileOutputStream.open(FileOutputStream.java:298)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:237)
+	at java.base/java.io.FileOutputStream.<init>(FileOutputStream.java:187)
+	at org.apache.maven.plugin.surefire.report.StatelessXmlReporter.getOutputStream(StatelessXmlReporter.java:367)
+	at org.apache.maven.plugin.surefire.report.StatelessXmlReporter.testSetCompleted(StatelessXmlReporter.java:145)
+	at org.apache.maven.plugin.surefire.report.StatelessXmlReporter.testSetCompleted(StatelessXmlReporter.java:52)
+	at org.apache.maven.plugin.surefire.report.TestSetRunListener.testSetCompleted(TestSetRunListener.java:211)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$TestSetCompletedListener.handle(ForkClient.java:147)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient$TestSetCompletedListener.handle(ForkClient.java:135)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkedProcessEventNotifier.notifyEvent(ForkedProcessEventNotifier.java:233)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.handleEvent(ForkClient.java:353)
+	at org.apache.maven.plugin.surefire.booterclient.output.ForkClient.handleEvent(ForkClient.java:59)
+	at org.apache.maven.plugin.surefire.booterclient.output.ThreadedStreamConsumer$Pumper.run(ThreadedStreamConsumer.java:96)
+	at java.base/java.lang.Thread.run(Thread.java:834)
+
+
